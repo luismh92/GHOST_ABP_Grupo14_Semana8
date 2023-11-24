@@ -1,4 +1,4 @@
-# GHOST_ABP_Grupo14_Semana6
+# GHOST_ABP_Grupo14_Semana7
 Repositorio para alojamiento de pruebas E2E
 
 ### Grupo 14
@@ -12,7 +12,7 @@ Luis Alberto Mendoza Hernández ([l.mendozah@uniandes.edu.co](mailto:l.mendozah@
 
 Hernán David Martínez Domínguez ([hd.martinezd1@uniandes.edu.co](mailto:hd.martinezd1@uniandes.edu.co))
 _________________
-## Tutorial Entrega Semana 6 Ghost - Pruebas Automatizadas de Software
+## Tutorial Entrega Semana 7 Ghost - Pruebas Automatizadas de Software
 _________________
 
 ### Video de ejecución de las pruebas
