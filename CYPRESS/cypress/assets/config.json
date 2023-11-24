@@ -1,0 +1,14 @@
+{
+    "username":      "bc.castro@uniandes.edu.co",
+    "password":      "0123456789",
+    "posts_url":     "http://54.172.114.8:2368/ghost/#/posts",
+    "pages_url":     "http://54.172.114.8:2368/ghost/#/pages",
+    "dashboard_url": "http://54.172.114.8:2368/ghost/#/dashboard",
+    "new_page_url":  "http://54.172.114.8:2368/ghost/#/editor/page",
+    "new_post_url":  "http://54.172.114.8:2368/ghost/#/editor/post",
+    "sigin_url" :    "http://54.172.114.8:2368/ghost/#/signin",
+    "fill_title":    "Title",
+    "fill_text":     "Text",
+    "settings_url":  "http://54.172.114.8:2368/ghost/#/settings",
+    "members_url":   "http://54.172.114.8:2368/ghost/#/members"
+}
