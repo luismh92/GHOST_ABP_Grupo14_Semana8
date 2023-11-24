@@ -4,17 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "replace-json": "node replace.js",
-    "escenario10-cypress-modified": "node backup-replace.js && npm run replace-json \"http://52.91.116.86\" && npx cypress run --spec ./cypress/e2e/1-iniciar-sesion.feature && npx cypress run --spec ./cypress/e2e/crear-miembro.feature && node rename.js",
-    "escenario40-cypress": "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" && npx cypress run",
-    "escenario10-cypress": "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" && npx cypress run --spec ./cypress/e2e/1-iniciar-sesion.feature && npx cypress run --spec ./cypress/e2e/crear-miembro.feature && node rename40.js",
-    "escenario40-cypress-modified": "node backup-replace.js && npm run replace-json \"http://52.91.116.86\" && npx cypress run"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^8.3.1",
     "cypress": "^13.1.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "resemblejs": "^5.0.0"
