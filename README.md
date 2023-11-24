@@ -23,17 +23,6 @@ https://1drv.ms/f/s!Ajb63RmdbsrmkVxqZHAz-r4_Zpt2?e=Ghafj6
 
 ![image](https://github.com/CamiloCastro-MISO/GHOST_ABP_Grupo14_Semana6/assets/141591369/aac18c6d-9608-414c-9f3b-e36f8f1a7c2d)
 
-
-
-### Video toma de capturas de pantalla
-
-A continuación, usted encontrará un enlace a un video con el procedimiento realizado en la semana para habilitar la toma de capturas de pantalla, las decisiones tomadas respecto a la construcción del reporte y breve explicación de los resultados obtenidos en la semana:
-
-https://1drv.ms/f/s!Ajb63RmdbsrmkVv-u_czu-uFXbgc?e=SflH75
-
-![image](https://github.com/CamiloCastro-MISO/GHOST_ABP_Grupo14_Semana6/assets/141591369/d14650c0-5f2f-4341-9b56-300e8a5625a5)
-
-
 ______________
 ## Paso a paso para ejecutar las pruebas
 
@@ -41,7 +30,7 @@ A continuación, usted encontrará una guía con los pasos necesarios para poder
 
 1. Clone el repositorio encontrado en https://github.com/CamiloCastro-MISO/GHOST_ABP_Grupo14_Semana6. Para esto, puede usar el comando: 
     ```bash
-    git clone https://github.com/CamiloCastro-MISO/GHOST_ABP_Grupo14_Semana6.git
+    git clone https://github.com/CamiloCastro-MISO/GHOST_ABP_Grupo14_Semana6.git  /// CHANGE
     ```
    
 
@@ -52,9 +41,6 @@ A continuación, usted encontrará una guía con los pasos necesarios para poder
 **Nota:** existen dos versiones instaladas en AWS ElasticBeanstalk:
 
 http://54.172.114.8:2368/ghost/#/signin -- **5.74**
-</br>
-http://52.91.116.86:2368/ghost/#/signin -- **6.0 Estilos Modificados**
-
 
 **Es necesario tener instalado Python.**
 
