@@ -10,9 +10,9 @@
     "escenario40-cypress": "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" && npx cypress run",
     "escenario10-cypress": "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" && npx cypress run --spec ./cypress/e2e/1-iniciar-sesion.feature && npx cypress run --spec ./cypress/e2e/crear-miembro.feature && node rename40.js",
     "escenario40-cypress-modified": "node backup-replace.js && npm run replace-json \"http://52.91.116.86\" && npx cypress run",
-    "pool-a-priori" : "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" && export POOL_DATA=apriori && npx cypress run --spec ./cypress/e2e/manejo-tags.feature",
-    "pool-dinámico" : "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" && npx cypress run --spec ./cypress/e2e/manejo-tags.feature",
-    "pool-aleatorio-faker" : "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" && npx cypress run --spec ./cypress/e2e/manejo-tags.feature"
+    "pool-a-priori": "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" &&  npx cypress run --env POOL_DATA=apriori --spec ./cypress/e2e/manejo-tags.feature",
+    "pool-dinámico": "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" && npx cypress run --env POOL_DATA=dinamico --spec ./cypress/e2e/manejo-tags.feature",
+    "pool-aleatorio-faker": "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" && npx cypress run --env POOL_DATA=aleatorio  --spec ./cypress/e2e/manejo-tags.feature"
   },
   "keywords": [],
   "author": "",
@@ -26,5 +26,7 @@
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
     "step_definitions": "cypress/e2e/**/"
+  },
+  "dependencies": {
   }
 }

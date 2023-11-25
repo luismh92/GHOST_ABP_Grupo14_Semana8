@@ -10,7 +10,7 @@ class TagPage {
         "apriori" : items[Math.floor(Math.random()*items.length)],
         "dinamico" : {},
         "aleatorio" : {}
-    }["apriori"]
+    }[Cypress.env('POOL_DATA')]
 
 
     takeScreenshot() {

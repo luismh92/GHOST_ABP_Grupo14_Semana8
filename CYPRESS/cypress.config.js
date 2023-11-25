@@ -12,6 +12,9 @@ module.exports = {
   },
   screenshotsFolder: "cypress/screenshots",
   scrollBehavior: 'nearest',
-  trashAssetsBeforeRuns: false
+  trashAssetsBeforeRuns: false,
+  env: {
+    POOL_DATA: 'apriori',
+  },
 };
 
