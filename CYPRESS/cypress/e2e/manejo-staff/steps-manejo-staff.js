@@ -36,7 +36,7 @@ And('el usuario no ingresa correo del staff' , () => {
 });
 
 And('el usuario ingresa correo del staff' , () => {
-    pageItem.typeofEmail('dummy@mail.com');
+    pageItem.typeofEmail(pageItem.item.staffEmail);
     cy.wait(1000)
 });
 
