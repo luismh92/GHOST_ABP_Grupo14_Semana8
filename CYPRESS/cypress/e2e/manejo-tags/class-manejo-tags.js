@@ -1,16 +1,16 @@
 import config from "../../assets/config.json";
 import LoginPage from '../1-iniciar-sesion/1-class-inicio-sesion';
 import DashBoardItem from '../dashboard/class-dashboard';
-import items from "../../fixtures/manejo-tags/manejo_tags_apriori_mock_data.json";
+//import items from "../../fixtures/manejo-tags/manejo_tags_apriori_mock_data.json";
 
 
 class TagPage {
 
-    item = {
-        "apriori" : items[Math.floor(Math.random()*items.length)],
-        "dinamico" : {},
-        "aleatorio" : {}
-    }["apriori"]
+    // item = {
+    //     "apriori" : items[Math.floor(Math.random()*items.length)],
+    //     "dinamico" : {},
+    //     "aleatorio" : {}
+    // }["apriori"]
 
 
     takeScreenshot() {

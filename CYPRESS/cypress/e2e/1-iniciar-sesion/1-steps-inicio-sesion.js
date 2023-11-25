@@ -3,24 +3,32 @@ import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps';
 import config from "../../assets/config.json";
 
 const loginPage = new LoginPage();
+let number = 0;
 
 Given('Un usuario se encuentra en la pagina de inicio de sesion de Ghost', () => {
+    loginPage.fetchData();
+    cy.wait(500);
+    cy.task('log', 'Valor Data: ' + JSON.stringify(loginPage.data));
+    cy.task('log', 'Se cargo Data?: ' + loginPage.dataLoaded);
     loginPage.visit();
     cy.wait(500);
 });
 
 When('el usuario introduce un nombre de usuario y contrasena incorrectos', () => {
-    loginPage.fillUsername('error'+config.username);
+    number = loginPage.getRandomNumber();
+    loginPage.fillUsername(loginPage.data[number].username);
     cy.wait(500);
-    loginPage.fillPassword(config.password+'error');
+    loginPage.fillPassword(loginPage.data[number].password);
 });
 
 When('el usuario introduce solamente un nombre de usuario correcto', () => {
-    loginPage.fillUsername(config.username);
+    number = loginPage.getRandomNumber();
+    loginPage.fillUsername(loginPage.data[number].username);
 });
 
 When('el usuario introduce solamente una contrasena correcta', () => {
-    loginPage.fillPassword(config.password);
+    number = loginPage.getRandomNumber();
+    loginPage.fillPassword(loginPage.data[number].password);
 });
 
 When('el usuario no introduce nombre de usuario ni contrasena', () => {
@@ -33,7 +41,7 @@ When('el usuario introduce un nombre de usuario y contrasena correctos', () => {
 });
 
 And('el usuario hace clic en el boton de inicio de sesion', () => {
-     loginPage.submit();
+    loginPage.submit();
 
 });
 

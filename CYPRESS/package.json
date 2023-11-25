@@ -11,8 +11,8 @@
     "escenario10-cypress": "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" && npx cypress run --spec ./cypress/e2e/1-iniciar-sesion.feature && npx cypress run --spec ./cypress/e2e/crear-miembro.feature && node rename40.js",
     "escenario40-cypress-modified": "node backup-replace.js && npm run replace-json \"http://52.91.116.86\" && npx cypress run",
     "pool-a-priori": "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" &&  npx cypress run --env POOL_DATA=apriori",
-    "pool-dinamico": "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" &&  npx cypress run --env POOL_DATA=dinamico",
-    "pool-aleatorio-faker": "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" &&  npx cypress run --env POOL_DATA=aleatorio"
+    "pool-dinamico": "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" &&  npx cypress run --env POOL_DATA=dynamic",
+    "pool-aleatorio-faker": "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" &&  npx cypress run --env POOL_DATA=random"
   },
   "keywords": [],
   "author": "",

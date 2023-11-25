@@ -5,7 +5,13 @@ module.exports = {
   e2e: {
     setupNodeEvents(on, config) {
       on('file:preprocessor', cucumber());
+      on('task', {
+        log(message) {
+          console.log(message)
 
+          return null
+        },
+      })
 
     },
     specPattern: "**/*.feature",
