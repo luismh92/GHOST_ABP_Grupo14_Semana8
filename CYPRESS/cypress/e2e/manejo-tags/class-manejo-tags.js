@@ -1,8 +1,17 @@
 import config from "../../assets/config.json";
 import LoginPage from '../1-iniciar-sesion/1-class-inicio-sesion';
 import DashBoardItem from '../dashboard/class-dashboard';
+import items from "../../fixtures/manejo-tags/manejo_tags_apriori_mock_data.json";
+
 
 class TagPage {
+
+    item = {
+        "apriori" : items[Math.floor(Math.random()*items.length)],
+        "dinamico" : {},
+        "aleatorio" : {}
+    }["apriori"]
+
 
     takeScreenshot() {
         cy.wait(500);
@@ -55,14 +64,15 @@ class TagPage {
     }
 
     fillName(){
+        console.log("fillName", process.env)
         cy.wait(500);
-        cy.get('input[data-test-input="tag-name"]').type('tag1');
+        cy.get('input[data-test-input="tag-name"]').type(this.item.tagName);
         this.takeScreenshot();
     }
 
     filldescription(){
         cy.wait(1000);
-        cy.get('#tag-description').type('description1');
+        cy.get('#tag-description').type(this.item.tagDescription);
         cy.wait(1000);
         this.takeScreenshot();
     }
@@ -76,19 +86,19 @@ class TagPage {
 
     fillTitleMetadata(){    
         cy.wait(1000);
-        cy.get('input[id="meta-title"]').type('title1');
+        cy.get('input[id="meta-title"]').type(this.item.metaTitle);
         this.takeScreenshot();
     }
 
     fillDescriptionMetadata(){    
         cy.wait(1000);
-        cy.get('textarea[id="meta-description"]').type('description1');
+        cy.get('textarea[id="meta-description"]').type(this.item.metaDescription);
         this.takeScreenshot();
     }
 
     fillCanonicalUrlMetadata(){
         cy.wait(1000);
-        cy.get('input[id="canonical-url"]').type('https://tobiasahlin.com/blog/previous-sibling-css-has/');
+        cy.get('input[id="canonical-url"]').type(this.item.canonicalUrl);
         this.takeScreenshot();
     }   
 
@@ -100,13 +110,13 @@ class TagPage {
 
     fillTitleFacebook(){    
         cy.wait(1000);
-        cy.get('input[id="og-title"]').type('title1');
+        cy.get('input[id="og-title"]').type(this.item.ogTitle);  
         this.takeScreenshot();
     }
 
     fillDescriptionFacebook(){    
         cy.wait(1000);
-        cy.get('textarea[id="og-description"]').type('description1');
+        cy.get('textarea[id="og-description"]').type(this.item.ogDescription);   
         this.takeScreenshot();
     }
 }
