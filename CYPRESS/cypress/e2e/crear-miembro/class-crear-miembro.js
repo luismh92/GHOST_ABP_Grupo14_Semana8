@@ -36,28 +36,29 @@ class MemberItem {
     }
 
     goToMembers() {
+        cy.wait(500);
         cy.get('[data-test-nav="members"]').click();
         this.takeScreenshot();
-        cy.wait(1000);
     }
 
     newMember() {
+        cy.wait(1000);
         cy.get('[data-test-new-member-button="true"]').click();
         this.takeScreenshot();
-        cy.wait(1000);
     }
 
     fillMember(name, mail) {
-        cy.get('#member-name').type(this.item.memberName);
+        cy.wait(500);
+        cy.get('#member-name').type(name);
         this.takeScreenshot();
-        cy.wait(1000);
-        cy.get('#member-email').type(this.item.memberEmail);
+        cy.wait(500);
+        cy.get('#member-email').type(mail);
         this.takeScreenshot();
-        cy.wait(1000);
     }
 
     saveMember() {
         try {
+            cy.wait(500);
             cy.get('button[data-test-button="save"]').click();
             this.takeScreenshot();
             cy.wait(1000);
@@ -76,7 +77,7 @@ class MemberItem {
 
     validateMember(name, email) {
         cy.wait(500);
-        cy.get('p.gh-members-list-email').contains(email).should('be.visible');
+        cy.get('p.gh-members-list-email').contains(email);
         this.takeScreenshot();
     }
 

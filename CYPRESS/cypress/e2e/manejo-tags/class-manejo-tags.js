@@ -4,7 +4,6 @@ import LoginPage from '../1-iniciar-sesion/1-class-inicio-sesion';
 import DashBoardItem from '../dashboard/class-dashboard';
 
 
-
 class TagPage {
 
     
@@ -100,7 +99,7 @@ class TagPage {
     }
 
     fillCanonicalUrlMetadata(){
-        cy.wait(1000);
+        cy.wait(500);
         cy.get('input[id="canonical-url"]').type(this.item.canonicalUrl);
         this.takeScreenshot();
     }   

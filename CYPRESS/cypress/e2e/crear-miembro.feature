@@ -34,3 +34,4 @@ Feature: crear miembro sitio
         And el usario digita name y mail
         And el usuario da click a la seccion de miembros del sitio
         Then el usuario da click en el boton Leave
+ 

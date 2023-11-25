@@ -1,11 +1,18 @@
 import config from "../../assets/config.json";
+import { faker } from '@faker-js/faker';
+
 
 
 class LoginPage {
 
+    constructor() {
+        this.dataLoaded = false;
+        this.data = null;
+    }
+
     takeScreenshot() {
         cy.wait(500);
-        cy.screenshot("sshot");
+        //cy.screenshot("sshot");
         cy.wait(1000);
     }
 
@@ -48,84 +55,33 @@ class LoginPage {
 
     }
 
-    // generateDatapoolApriori() {
-    //     cy.wait(1000);
-    //     cy.get('button[data-test-button="generate-datapool"]').click();
-    //     this.takeScreenshot();
-    // }
 
-    // generateUsername() {
-    //     cy.wait(1000);
-    //     cy.get('button[data-test-button="generate-username"]').click();
-    //     this.takeScreenshot();
-    // }
+    fetchData() {
+        const poolData = Cypress.env('POOL_DATA');
+        cy.task('log', 'Pool data actual: ' + poolData);
+        if ((poolData === 'apriori' && !this.dataLoaded) || poolData === 'dynamic') {
+            let fetchResponse = fetch("https://my.api.mockaroo.com/1_iniciar_sesion.json?key=255bade0");
+            fetchResponse.then(response => response.json())
+                .then(json => {
+                    this.data = json;
+                    this.dataLoaded = true;
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        } else if (poolData === 'random' && !this.dataLoaded) {
+            this.data = Array.from({ length: 10 }, () => ({
+                username: faker.internet.email(),
+                password: faker.internet.password(),
+                dashboard_url: "http://54.172.114.8:2368/ghost/#/dashboard"
+            }));
+            this.dataLoaded = true;
+        }
+    }
 
-    // generatePassword() {
-    //     cy.wait(1000);
-    //     cy.get('button[data-test-button="generate-password"]').click();
-    //     this.takeScreenshot();
-    // }
-
-    // generatePostUrl() {
-    //     cy.wait(1000);
-    //     cy.get('button[data-test-button="generate-post-url"]').click();
-    //     this.takeScreenshot();
-    // }
-
-    // generatePageUrl() {
-    //     cy.wait(1000);
-    //     cy.get('button[data-test-button="generate-page-url"]').click();
-    //     this.takeScreenshot();
-    // }
-
-    // generateDashboardUrl() {
-    //     cy.wait(1000);
-    //     cy.get('button[data-test-button="generate-dashboard-url"]').click();
-    //     this.takeScreenshot();
-    // }
-
-    // generateNewPageUrl() {
-    //     cy.wait(1000);
-    //     cy.get('button[data-test-button="generate-new-page-url"]').click();
-    //     this.takeScreenshot();
-    // }
-
-    // generateNewPostUrl() {
-    //     cy.wait(1000);
-    //     cy.get('button[data-test-button="generate-new-post-url"]').click();
-    //     this.takeScreenshot();
-    // }
-
-    // generateSignupUrl() {
-    //     cy.wait(1000);
-    //     cy.get('button[data-test-button="generate-signup-url"]').click();
-    //     this.takeScreenshot();
-    // }
-
-    // generateSettingsUrl() {
-    //     cy.wait(1000);
-    //     cy.get('button[data-test-button="generate-settings-url"]').click();
-    //     this.takeScreenshot();
-    // }
-
-    // generateMembersUrl() {
-    //     cy.wait(1000);
-    //     cy.get('button[data-test-button="generate-members-url"]').click();
-    //     this.takeScreenshot();
-    // }
-
-    // generateTitle() {
-    //     cy.wait(1000);
-    //     cy.get('button[data-test-button="generate-title"]').click();
-    //     this.takeScreenshot();
-    // }
-
-    // generateText() {
-    //     cy.wait(1000);
-    //     cy.get('button[data-test-button="generate-text"]').click();
-    //     this.takeScreenshot();
-    // }
-
+    getRandomNumber() {
+        return Math.floor(Math.random() * 9);
+    }
 
 }
 

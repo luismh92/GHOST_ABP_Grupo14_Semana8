@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import itemsApriori from "../../fixtures/manejo-tags/apriori_mock_data.json";
+import itemsApriori from "../../fixtures/crear-post/apriori_mock_data.json";
 
 
 

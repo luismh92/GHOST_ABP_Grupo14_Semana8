@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import itemsApriori from "../../fixtures/manejo-tags/apriori_mock_data.json";
+import itemsApriori from "../../fixtures/crear-miembro/apriori_mock_data.json";
 
 const getItem = async (items) => await items[Math.floor(Math.random()*items.length)]
 
