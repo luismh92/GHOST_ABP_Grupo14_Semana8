@@ -104,6 +104,25 @@ class TagPage {
         this.takeScreenshot();
     }   
 
+    expandXcard(){
+        cy.wait(500);
+        cy.get('div > h4').contains('X card').parent().siblings('button').click();
+        this.takeScreenshot();
+    }
+
+    fillTitleXcard(){    
+        cy.wait(500);
+        cy.get('input[id="twitter-title"]').type(this.item.ogTitle);  
+        this.takeScreenshot();
+    }
+
+    fillDescriptionXcard(){    
+        cy.wait(500);
+        cy.get('textarea[id="twitter-description"]').type(this.item.ogDescription);   
+        this.takeScreenshot();
+    }
+
+
     expandFacebook(){
         cy.wait(500);
         cy.get('div > h4').contains('Facebook card').parent().siblings('button').click();

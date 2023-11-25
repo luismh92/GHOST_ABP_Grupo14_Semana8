@@ -56,6 +56,21 @@ And('el usuario llena el conical url de metadata', () => {
 });
 
 
+And('el usuario expande el item xcard', () => {
+    tagPage.expandXcard();
+});
+
+
+And('el usuario llena el titulo de xcard', () => {
+    tagPage.fillTitleXcard();
+});
+
+
+And('el usuario llena la descripcion de xcard', () => {
+    tagPage.fillDescriptionXcard();
+});
+
+
 And('el usuario expande el item facebook', () => {
     tagPage.expandFacebook();
 });
