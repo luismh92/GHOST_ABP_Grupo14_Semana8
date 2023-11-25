@@ -1,8 +1,19 @@
 import config from "../../assets/config.json";
 import LoginPage from '../1-iniciar-sesion/1-class-inicio-sesion';
 import DashBoardItem from '../dashboard/class-dashboard';
-
+import fetchData from "../../fixtures/crear-miembro/fetch_mock_data";
 class MemberItem {
+
+    item = {}
+
+    constructor() {
+        this.initializeData();
+    }
+    
+    async initializeData() {
+        this.item = await fetchData();
+    }
+
 
     takeScreenshot() {
         cy.wait(500);
@@ -37,10 +48,10 @@ class MemberItem {
     }
 
     fillMember(name, mail) {
-        cy.get('#member-name').type(name);
+        cy.get('#member-name').type(this.item.memberName);
         this.takeScreenshot();
         cy.wait(1000);
-        cy.get('#member-email').type(mail);
+        cy.get('#member-email').type(this.item.memberEmail);
         this.takeScreenshot();
         cy.wait(1000);
     }
@@ -58,31 +69,31 @@ class MemberItem {
     }
 
     validate(text) {
+        cy.wait(500);
         cy.get('p.response').contains(text);
         this.takeScreenshot();
-        cy.wait(1000);
     }
 
     validateMember(name, email) {
+        cy.wait(500);
         cy.get('p.gh-members-list-email').contains(email).should('be.visible');
         this.takeScreenshot();
-        cy.wait(1000);
     }
 
     leave() {
+        cy.wait(500);
         cy.get('[data-test-leave-button]').click();
         this.takeScreenshot();
-        cy.wait(1000);
     }
 
     addYourself() {
+        cy.wait(500);
         cy.get('body').then($body => {
             if ($body.find('[data-test-button="add-yourself"]').length > 0) {
                 cy.get('[data-test-button="add-yourself"]').click();
                 this.takeScreenshot();
             }
         });
-        cy.wait(1000);
     }
 }
 

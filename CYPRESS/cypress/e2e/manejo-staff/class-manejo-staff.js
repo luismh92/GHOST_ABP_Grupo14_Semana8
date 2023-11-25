@@ -1,8 +1,18 @@
 import config from "../../assets/config.json";
 import LoginPage from '../1-iniciar-sesion/1-class-inicio-sesion';
 import DashBoardItem from '../dashboard/class-dashboard';
-
+import fetchData from "../../fixtures/manejo-staff/fetch_mock_data";
 class PageItem {
+
+    item = {}
+
+    constructor() {
+        this.initializeData();
+    }
+    
+    async initializeData() {
+        this.item = await fetchData();
+    }
 
     takeScreenshot() {
         cy.wait(500);
@@ -40,7 +50,7 @@ s
     }
 
     typeofEmail(email) {
-        cy.get('input[placeholder="jamie@example.com"]').type(email);
+        cy.get('input[placeholder="jamie@example.com"]').type(this.item.staffEmail);
         this.takeScreenshot();
         cy.wait(1000);
     }

@@ -1,8 +1,18 @@
 import config from "../../assets/config.json";
 import LoginPage from '../1-iniciar-sesion/1-class-inicio-sesion';
 import DashBoardItem from '../dashboard/class-dashboard';
-
+import fetchData from "../../fixtures/crear-post/fetch_mock_data";
 class PostItem {
+
+    item = {}
+
+    constructor() {
+        this.initializeData();
+    }
+    
+    async initializeData() {
+        this.item = await fetchData();
+    }
 
     takeScreenshot() {
         cy.wait(1000);
@@ -11,22 +21,22 @@ class PostItem {
     }
 
     visit() {
+        cy.wait(1000)
         cy.visit(config.posts_url);
         this.takeScreenshot();
-        cy.wait(1000)
     }
 
     visitDetail() {
+        cy.wait(1000)
         cy.visit(config.new_post_url);
         this.takeScreenshot();
-        cy.wait(1000)
     }
 
     fillPost() {
-        cy.get('textarea.gh-editor-title').type('Title');
+        cy.get('textarea.gh-editor-title').type(this.item.postTitle);
         this.takeScreenshot();
         cy.wait(1000)
-        cy.get('div.kg-prose').type('Text');
+        cy.get('div.kg-prose').type(this.item.postDescription);
         this.takeScreenshot();
         cy.wait(1000)
     }
