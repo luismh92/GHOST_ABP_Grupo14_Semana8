@@ -4,7 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "replace-json": "node replace.js",
+    "escenario10-cypress-modified": "node backup-replace.js && npm run replace-json \"http://52.91.116.86\" && npx cypress run --spec ./cypress/e2e/1-iniciar-sesion.feature && npx cypress run --spec ./cypress/e2e/crear-miembro.feature && node rename.js",
+    "escenario40-cypress": "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" && npx cypress run",
+    "escenario10-cypress": "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" && npx cypress run --spec ./cypress/e2e/1-iniciar-sesion.feature && npx cypress run --spec ./cypress/e2e/crear-miembro.feature && node rename40.js",
+    "escenario40-cypress-modified": "node backup-replace.js && npm run replace-json \"http://52.91.116.86\" && npx cypress run",
+    "pool-a-priori" : "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" && export POOL_DATA=apriori && npx cypress run --spec ./cypress/e2e/manejo-tags.feature",
+    "pool-dinámico" : "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" && npx cypress run --spec ./cypress/e2e/manejo-tags.feature",
+    "pool-aleatorio-faker" : "node backup-replace.js && npm run replace-json \"http://54.172.114.8\" && npx cypress run --spec ./cypress/e2e/manejo-tags.feature"
   },
   "keywords": [],
   "author": "",

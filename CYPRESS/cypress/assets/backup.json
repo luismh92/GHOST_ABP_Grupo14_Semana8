@@ -10,5 +10,7 @@
     "fill_title":    "Title",
     "fill_text":     "Text",
     "settings_url":  "{process.env.main_url}:2368/ghost/#/settings",
-    "members_url":   "{process.env.main_url}:2368/ghost/#/members"
+    "members_url":   "{process.env.main_url}:2368/ghost/#/members",
+    "new_tag_url":   "{process.env.main_url}:2368/ghost/#/tags/new",
+    "tags_url" :     "{process.env.main_url}:2368/ghost/#/tags"
 }
