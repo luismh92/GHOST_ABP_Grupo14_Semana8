@@ -47,6 +47,86 @@ class LoginPage {
         this.takeScreenshot();
 
     }
+
+    // generateDatapoolApriori() {
+    //     cy.wait(1000);
+    //     cy.get('button[data-test-button="generate-datapool"]').click();
+    //     this.takeScreenshot();
+    // }
+
+    // generateUsername() {
+    //     cy.wait(1000);
+    //     cy.get('button[data-test-button="generate-username"]').click();
+    //     this.takeScreenshot();
+    // }
+
+    // generatePassword() {
+    //     cy.wait(1000);
+    //     cy.get('button[data-test-button="generate-password"]').click();
+    //     this.takeScreenshot();
+    // }
+
+    // generatePostUrl() {
+    //     cy.wait(1000);
+    //     cy.get('button[data-test-button="generate-post-url"]').click();
+    //     this.takeScreenshot();
+    // }
+
+    // generatePageUrl() {
+    //     cy.wait(1000);
+    //     cy.get('button[data-test-button="generate-page-url"]').click();
+    //     this.takeScreenshot();
+    // }
+
+    // generateDashboardUrl() {
+    //     cy.wait(1000);
+    //     cy.get('button[data-test-button="generate-dashboard-url"]').click();
+    //     this.takeScreenshot();
+    // }
+
+    // generateNewPageUrl() {
+    //     cy.wait(1000);
+    //     cy.get('button[data-test-button="generate-new-page-url"]').click();
+    //     this.takeScreenshot();
+    // }
+
+    // generateNewPostUrl() {
+    //     cy.wait(1000);
+    //     cy.get('button[data-test-button="generate-new-post-url"]').click();
+    //     this.takeScreenshot();
+    // }
+
+    // generateSignupUrl() {
+    //     cy.wait(1000);
+    //     cy.get('button[data-test-button="generate-signup-url"]').click();
+    //     this.takeScreenshot();
+    // }
+
+    // generateSettingsUrl() {
+    //     cy.wait(1000);
+    //     cy.get('button[data-test-button="generate-settings-url"]').click();
+    //     this.takeScreenshot();
+    // }
+
+    // generateMembersUrl() {
+    //     cy.wait(1000);
+    //     cy.get('button[data-test-button="generate-members-url"]').click();
+    //     this.takeScreenshot();
+    // }
+
+    // generateTitle() {
+    //     cy.wait(1000);
+    //     cy.get('button[data-test-button="generate-title"]').click();
+    //     this.takeScreenshot();
+    // }
+
+    // generateText() {
+    //     cy.wait(1000);
+    //     cy.get('button[data-test-button="generate-text"]').click();
+    //     this.takeScreenshot();
+    // }
+
+
 }
 
 export default LoginPage;
