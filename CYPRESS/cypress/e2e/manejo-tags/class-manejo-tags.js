@@ -8,6 +8,7 @@ class TagPage {
 
     
     item = {}
+    total = 0;
 
     constructor() {
         this.initializeData();
@@ -66,9 +67,9 @@ class TagPage {
         cy.get('div').contains('Edit tag')
     }
 
-    fillName(){
+    fillName(name = this.item.tagName){
         cy.wait(500);
-        cy.get('input[data-test-input="tag-name"]').type(this.item.tagName);
+        cy.get('input[data-test-input="tag-name"]').type(name);
         this.takeScreenshot();
     }
 
@@ -86,21 +87,21 @@ class TagPage {
     }
 
 
-    fillTitleMetadata(){    
+    fillTitleMetadata(title= this.item.metaTitle){    
         cy.wait(500);
-        cy.get('input[id="meta-title"]').type(this.item.metaTitle);
+        cy.get('input[id="meta-title"]').type(title);
         this.takeScreenshot();
     }
 
-    fillDescriptionMetadata(){    
+    fillDescriptionMetadata(description = this.item.metaDescription){    
         cy.wait(500);
-        cy.get('textarea[id="meta-description"]').type(this.item.metaDescription);
+        cy.get('textarea[id="meta-description"]').type(description);
         this.takeScreenshot();
     }
 
-    fillCanonicalUrlMetadata(){
+    fillCanonicalUrlMetadata(url= this.item.canonicalUrl){
         cy.wait(500);
-        cy.get('input[id="canonical-url"]').type(this.item.canonicalUrl);
+        cy.get('input[id="canonical-url"]').type(url);
         this.takeScreenshot();
     }   
 
@@ -129,16 +130,32 @@ class TagPage {
         this.takeScreenshot();
     }
 
-    fillTitleFacebook(){    
+    fillTitleFacebook(title = this.item.ogTitle){    
         cy.wait(500);
-        cy.get('input[id="og-title"]').type(this.item.ogTitle);  
+        cy.get('input[id="og-title"]').type(title);  
         this.takeScreenshot();
     }
 
-    fillDescriptionFacebook(){    
+    fillDescriptionFacebook(descripcion = this.item.ogDescription){    
         cy.wait(500);
-        cy.get('textarea[id="og-description"]').type(this.item.ogDescription);   
+        cy.get('textarea[id="og-description"]').type(descripcion);   
         this.takeScreenshot();
+    }
+
+    erroNameVacio(){    
+        cy.wait(500);
+        cy.get('p').contains('You must specify a name for the tag.');  
+        this.takeScreenshot();
+    }
+
+    erroUrlMetadata(){    
+        cy.wait(500);
+        cy.get('p').contains('The url should be a valid url');  
+        this.takeScreenshot();
+    }
+
+    spanCount(total){
+        cy.get('span[class="word-count"]').contains(total);
     }
 }
 
