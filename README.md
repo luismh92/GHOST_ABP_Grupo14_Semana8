@@ -2,7 +2,7 @@
 Repositorio para alojamiento de pruebas E2E
 
 ### Grupo 14
-Semana 6
+Semana 7
 
 ### Integrantes del equipo:
 
@@ -38,7 +38,7 @@ A continuación, usted encontrará una guía con los pasos necesarios para poder
 
 **Requisitos:**
 
-**Nota:** existen dos versiones instaladas en AWS ElasticBeanstalk:
+**Nota:** existe una version instalada en AWS ElasticBeanstalk:
 
 http://54.172.114.8:2368/ghost/#/signin -- **5.74**
 
@@ -74,50 +74,27 @@ npm install
 
 ## Nota: por favor ejecute las pruebas en el orden que se mencionan en el tutorial.
 
-**10 escenarios de prueba para generar un reporte compartivo**
+**Escenarios con datos apriori**
 
 Ejecute el siguiente comando para correr los tests:
 
 ```powershell
-npm run escenario10-cypress
+npm run pool-a-priori
 ```
 
-**10 escenarios de prueba para generar un reporte compartivo en la nueva versión de ghost**
+**Escenarios con datos dinamicos**
 
 Ejecute el siguiente comando para correr los tests:
 
 ```powershell
-npm run escenario10-cypress-modified
-```
-**Generar Reporte HTML**
-
-Ejecute el siguiente comando para crear el reporte:
-
-```powershell
-cd cypress
-```
-```powershell
-node index.js
+npm run pool-dinamico
 ```
 
-### Nota: en este paso la fecha seguramente no coincida por lo cual debe indicar la carpeta correcta.
-```powershell
-Start-Process .\results\2023-11-19T11.29.23.921Z\report.html
-```
-
-**40 escenarios de prueba de la semana pasada modificados para la toma de screenshots**
+**Escenarios con datos aleatorios**
 
 Ejecute el siguiente comando para correr los tests:
 
 ```powershell
-npm run escenario40-cypress
-```
-
-**40 escenarios de prueba de la semana pasada modificados para la toma de screenshots en la nueva versión de ghost**
-
-Ejecute el siguiente comando para correr los tests:
-
-```powershell
-npm run escenario40-cypress-modified
+npm run pool-aleatorio-faker
 ```
 
