@@ -1,7 +1,7 @@
 import PostItem from './class-crear-post'
 import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps';
 import config from "../../assets/config.json";
-
+import { faker } from '@faker-js/faker';
 const postItem = new PostItem();
 
 Given('Un usuario se encuentra en la pagina principal del admin de Ghost', () => {
@@ -27,7 +27,21 @@ And('el usuario hace click sobre el boton Settings', () => {
 });
 
 And('el usuario escribe en los campos Titulo y Contenido', () => {
-    postItem.fillPost();
+    postItem.fillTitle();
+    postItem.fillDescription();
+});
+
+And('el usuario escribe en los campos Titulo', () => {
+    postItem.fillTitle();
+});
+
+And('el usuario escribe en los campos Contenido', () => {
+    postItem.fillDescription();
+});
+
+And('el usuario escribe en los campos Url mas de los caracteres', () => {
+    const data = faker.string.alpha({ length: { min: 700, max: 1000 } })
+    postItem.fillUrl(data);
 });
 
 And('el usuario hace click sobre el boton Preview', () => {
@@ -46,6 +60,10 @@ And('el usuario hace click sobre el boton Publicar Ahora', () => {
     postItem.submitConfirmPublish()
 });
 
+And('el usuario agrega un numero a la hora', () => {
+    postItem.fillHora(2)
+});
+
 Then('el usuario deberia ver el menu de configuracion del Post', () => {
     cy.wait(800)
     cy.get('form[aria-label="Post settings"]').should('exist');
@@ -61,6 +79,11 @@ Then('el usuario deberia ser redirigido al formulario Crear Post', () => {
     cy.url().should('eq', config.new_post_url);
 });
 
+Then('la url deberia ser diferente al titulo', () => {
+    cy.wait(800)
+    cy.get('input[name="post-setting-slug"]').should('not.have.value', postItem.item.postTitle);
+});
+
 Then('el usuario deberia ver la previsualizacion del post', () => {
     cy.wait(800)
     cy.get('div.gh-browserpreview-iframecontainer').should('exist')
@@ -69,4 +92,10 @@ Then('el usuario deberia ver la previsualizacion del post', () => {
 Then('el usuario deberia ver el post como publicado', () => {
     cy.wait(800)
     cy.get('div.gh-publish-title').should('exist')
+});
+
+
+Then('el usuario deberia ver el error de formato', () => {
+    cy.wait(800)
+    postItem.errorHora()
 });
