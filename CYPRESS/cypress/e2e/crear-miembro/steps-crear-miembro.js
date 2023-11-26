@@ -91,6 +91,10 @@ Then ('el usuario vuelve a la seccion de miembros del sitio', () => {
 });
 
 
+Then('el usuario deberia ver un error , ingresar nombre', () => {
+    memberItem.validate('Invalid Name.');
+});
+
 
 
 
