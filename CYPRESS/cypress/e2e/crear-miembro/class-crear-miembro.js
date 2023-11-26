@@ -47,12 +47,16 @@ class MemberItem {
         this.takeScreenshot();
     }
 
-    fillMember(name, mail) {
+
+    fillMemberName(name = this.item.memberName){
         cy.wait(500);
         cy.get('#member-name').type(name);
         this.takeScreenshot();
+    }
+
+    fillMemberEmail(email = this.item.memberEmail){
         cy.wait(500);
-        cy.get('#member-email').type(mail);
+        cy.get('#member-email').type(email);
         this.takeScreenshot();
     }
 
@@ -96,6 +100,7 @@ class MemberItem {
             }
         });
     }
+
 }
 
 export default MemberItem;

@@ -1,6 +1,7 @@
 import MemberItem from './class-crear-miembro';
 import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps';
 import config from "../../assets/config.json";
+import { faker } from '@faker-js/faker';
 
 const memberItem = new MemberItem();
 
@@ -23,7 +24,22 @@ And('el usuario da clic en el boton New Member', () => {
 });
 
 And('el usario digita name y mail', () => {
-    memberItem.fillMember(memberItem.item.memberName, memberItem.item.memberEmail);
+    memberItem.fillMemberName(memberItem.item.memberName);
+    memberItem.fillMemberEmail(memberItem.item.memberEmail);
+});
+
+And('el usario digita mail', () => {
+    memberItem.fillMemberEmail(memberItem.item.memberEmail);
+});
+
+And('el usario digita name mas de los caracteres permitidos', () => {
+    const data = faker.string.alpha({ length: { min: 700, max: 1000 } })
+    memberItem.fillMemberName(data);
+});
+
+And('el usario digita mail mas de los caracteres permitidos', () => {
+    const data = faker.string.alpha({ length: { min: 700, max: 1000 } })
+    memberItem.fillMemberEmail(data);
 });
 
 And('el usuario da clic en el boton Save', () => {
@@ -41,7 +57,8 @@ And('el usuario da click a la seccion de miembros del sitio', () => {
 });
 
 And('el usario digita name y mail invalido', () => {
-    memberItem.fillMember('admin', 'mailsinarroba');
+    memberItem.fillMemberName('admin');
+    memberItem.fillMemberEmail('mailsinarroba');
 });
 
 Then('el usuario da click en el boton Leave', () => {
@@ -72,6 +89,7 @@ Then ('el usuario vuelve a la seccion de miembros del sitio', () => {
     cy.wait(500);
     cy.url().should('eq', config.members_url);
 });
+
 
 
 

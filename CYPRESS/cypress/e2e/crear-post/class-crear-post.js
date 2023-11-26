@@ -32,12 +32,16 @@ class PostItem {
         this.takeScreenshot();
     }
 
-    fillPost() {
+    fillTitle(title = this.item.postTitle) {
         cy.wait(800)
-        cy.get('textarea.gh-editor-title').type(this.item.postTitle);
+        cy.get('textarea.gh-editor-title').type(title);
         this.takeScreenshot();
         cy.wait(600)
-        cy.get('div.kg-prose').type(this.item.postDescription);
+    }   
+
+    fillDescription(description = this.item.postDescription) {
+        cy.wait(800)
+        cy.get('div.kg-prose').type(description);
         this.takeScreenshot();
         cy.wait(600)
     }
@@ -104,6 +108,27 @@ class PostItem {
         cy.wait(800);
         let dashboard = new DashBoardItem();
         dashboard.visit();
+        this.takeScreenshot();
+        cy.wait(800)
+    }
+
+    fillUrl(url = this.item.postUrl) {
+        cy.wait(800)
+        cy.get('input[name="post-setting-slug"]').type(url);
+        this.takeScreenshot();
+        cy.wait(800)
+    }
+
+    fillHora(hora = this.item.postHora) {
+        cy.wait(800)
+        cy.get('input[data-test-date-time-picker-time-input]').type(hora);
+        this.takeScreenshot();
+        cy.wait(800)
+    }
+
+    errorHora() {
+        cy.wait(800)
+        cy.get('div').contains('Must be in format: "15:00"');
         this.takeScreenshot();
         cy.wait(800)
     }
