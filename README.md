@@ -28,7 +28,7 @@ ______________
 
 A continuación, usted encontrará una guía con los pasos necesarios para poder ejecutar exitosamente las pruebas de la aplicacion Ghost: 
 
-1. Clone el repositorio encontrado en https://github.com/CamiloCastro-MISO/GHOST_ABP_Grupo14_Semana6. Para esto, puede usar el comando: 
+1. Clone el repositorio encontrado en https://github.com/CamiloCastro-MISO/GHOST_ABP_Grupo14_Semana7. Para esto, puede usar el comando: 
     ```bash
     git clone https://github.com/CamiloCastro-MISO/GHOST_ABP_Grupo14_Semana7.git
     ```
