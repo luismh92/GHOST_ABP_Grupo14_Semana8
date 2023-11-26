@@ -1,7 +1,7 @@
 @tags
 Feature: manejo de tags en la aplicacion Ghost
 
-    Scenario: Crear un nuevo tags (titulo)
+  Scenario: Crear un nuevo tags (titulo)
     Given Un usuario se encuentra en la pagina de inicio de sesion de Ghost Tags
     When el usuario se dirige a la seccion tags del sitio
     And el usuario hace clic en el boton de New Tag
