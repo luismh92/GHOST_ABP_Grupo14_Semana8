@@ -13,7 +13,6 @@ class LoginPage {
     takeScreenshot() {
         cy.wait(500);
         //cy.screenshot("sshot");
-        cy.wait(1000);
     }
 
     visit() {
