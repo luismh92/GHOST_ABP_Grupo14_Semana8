@@ -50,8 +50,9 @@ class TagPage {
     }
 
     submit() {
-        cy.wait(500);
+        cy.wait(1000);
         cy.get('button[data-test-button="save"]').click();
+        cy.wait(1000);
         this.takeScreenshot();
     }
 
