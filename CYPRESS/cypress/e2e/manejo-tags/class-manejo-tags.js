@@ -37,7 +37,7 @@ class TagPage {
     }
 
     goTotags() {
-        cy.wait(1000);
+        cy.wait(2000);
         cy.get('[data-test-nav="tags"]').click();
         this.takeScreenshot();
     }
@@ -69,7 +69,7 @@ class TagPage {
     }
 
     fillName(name = this.item.tagName){
-        cy.wait(1000);
+        cy.wait(2000);
         cy.get('input[data-test-input="tag-name"]').type(name);
         this.takeScreenshot();
     }
