@@ -95,11 +95,6 @@ And('el usuario llena el descripcion de facebook', () => {
 });
 
 
-Then('el usuario debe ser redirigido al editar tag si fue exitoso', () => {
-    tagPage.validateEditPage();
-});
-
-
 And('el usuario ve un error de name invalido', () => {
     tagPage.erroNameVacio();
 });
@@ -134,10 +129,15 @@ And('el usuario llena el descripcion de metadata mas de 156 caracteres', () => {
     tagPage.fillDescriptionMetadata(data);
 });
 
-And('el usuario ve un warning de caracteres recomendado', () => {
+Then('el usuario ve un warning de caracteres recomendado', () => {
     tagPage.spanCount(tagPage.total);
 });
 
+Then('el usuario debe ser redirigido al editar tag si fue exitoso', () => {
+    tagPage.validateEditPage();
+});
 
-
+Then('el usuario ve un error de canonical url invalido', () => {
+    tagPage.erroUrlMetadata();
+});
 

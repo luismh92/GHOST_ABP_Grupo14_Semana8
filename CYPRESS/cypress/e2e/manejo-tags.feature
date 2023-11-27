@@ -204,7 +204,7 @@ Feature: manejo de tags en la aplicacion Ghost
     And el usuario expande el item metadata
     And el usuario llena el conical url de metadata invalid
     And el usuario da click sobre el boton Save
-    Then el usuario ve un error de conical url invalido
+    Then el usuario ve un error de canonical url invalido
 
 
   Scenario: Crear un nuevo tags con expand facebook (titulo mas de 65 caracteres)
