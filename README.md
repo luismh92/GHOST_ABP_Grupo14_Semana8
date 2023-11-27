@@ -44,7 +44,7 @@ A continuación, usted encontrará una guía con los pasos necesarios para poder
 
 **Requisitos:**
 
-**Nota:** Esta suite de pruebas está diseñada para correr sobre una versión local de Ghost, pero existe también una version de la aplicación instalada en AWS ElasticBeanstalk. Si desea probarla, necesitará modificar el archivo ./assets/backup.json para agregar el servidor a las pruebas y ejecutarlas sobre la versión en la nube. Sin embargo, recomendamos ejecutar esta suite de pruebas de forma local para evitar cualquier tipo de fallas por carga incorrecta de recursos asociada a latencia o fluctuaciones de ancho de banda.
+**Nota:** Esta suite de pruebas está diseñada para correr sobre una versión local de Ghost, pero existe también una version de la aplicación instalada en AWS ElasticBeanstalk. Si desea probarla, necesitará modificar el archivo ./assets/backup.json para agregar el servidor a las pruebas y ejecutarlas sobre la versión en la nube. Sin embargo, **recomendamos ejecutar esta suite de pruebas de forma local** para evitar cualquier tipo de fallas por carga incorrecta de recursos asociada a latencia o fluctuaciones de ancho de banda.
 
 Versión en la nube:
 
