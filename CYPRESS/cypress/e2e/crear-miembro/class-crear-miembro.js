@@ -42,7 +42,7 @@ class MemberItem {
     }
 
     newMember() {
-        cy.wait(2000);
+        cy.wait(3000);
         cy.get('[data-test-new-member-button="true"]').click();
         this.takeScreenshot();
     }
