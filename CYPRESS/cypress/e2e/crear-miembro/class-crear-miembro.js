@@ -16,7 +16,7 @@ class MemberItem {
 
 
     takeScreenshot() {
-        cy.wait(500);
+        cy.wait(1000);
         cy.screenshot("sshot");
         cy.wait(1000);
     }
@@ -36,7 +36,7 @@ class MemberItem {
     }
 
     goToMembers() {
-        cy.wait(500);
+        cy.wait(1000);
         cy.get('[data-test-nav="members"]').click();
         this.takeScreenshot();
     }
@@ -49,20 +49,20 @@ class MemberItem {
 
 
     fillMemberName(name = this.item.memberName){
-        cy.wait(500);
+        cy.wait(1000);
         cy.get('#member-name').type(name);
         this.takeScreenshot();
     }
 
     fillMemberEmail(email = this.item.memberEmail){
-        cy.wait(500);
+        cy.wait(1000);
         cy.get('#member-email').type(email);
         this.takeScreenshot();
     }
 
     saveMember() {
         try {
-            cy.wait(500);
+            cy.wait(1000);
             cy.get('button[data-test-button="save"]').click();
             this.takeScreenshot();
             cy.wait(1000);
@@ -74,25 +74,25 @@ class MemberItem {
     }
 
     validate(text) {
-        cy.wait(500);
+        cy.wait(1000);
         cy.get('p.response').contains(text);
         this.takeScreenshot();
     }
 
     validateMember(name, email) {
-        cy.wait(500);
+        cy.wait(1000);
         cy.get('p.gh-members-list-email').contains(email);
         this.takeScreenshot();
     }
 
     leave() {
-        cy.wait(500);
+        cy.wait(1000);
         cy.get('[data-test-leave-button]').click();
         this.takeScreenshot();
     }
 
     addYourself() {
-        cy.wait(500);
+        cy.wait(1000);
         cy.get('body').then($body => {
             if ($body.find('[data-test-button="add-yourself"]').length > 0) {
                 cy.get('[data-test-button="add-yourself"]').click();
