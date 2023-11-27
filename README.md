@@ -19,10 +19,16 @@ _________________
 
 A continuación, usted encontrará un enlace a un video con el paso a paso completo desde cero para la correcta ejecución de los tests, en Cypress, en caso tal de necesitar detalles adicionales sobre cómo ejecutar las pruebas:
 
-https://1drv.ms/f/s!Ajb63RmdbsrmkVxqZHAz-r4_Zpt2?e=Ghafj6
+[https://drive.google.com/drive/folders/1YNBZ-IWp2veu2v5JNKMCSwle4HEYKehY?usp=sharing](https://drive.google.com/drive/folders/1YNBZ-IWp2veu2v5JNKMCSwle4HEYKehY?usp=sharing)
 
-![image](https://github.com/CamiloCastro-MISO/GHOST_ABP_Grupo14_Semana6/assets/141591369/aac18c6d-9608-414c-9f3b-e36f8f1a7c2d)
+![image](https://github.com/CamiloCastro-MISO/GHOST_ABP_Grupo14_Semana7/assets/142316799/f5da9953-0737-4fba-ac82-54050b123440)
 
+______________
+## Descripción de la estrategia:
+
+A continuación, encontrará un link a la descripción de la estrategia y análisis para este sprint de pruebas:
+
+https://github.com/CamiloCastro-MISO/GHOST_ABP_Grupo14_Semana7/wiki/Descripci%C3%B3n-de-la-estrategia-para-las-pruebas-en-Cypress-%E2%80%90-Semana-7
 ______________
 ## Paso a paso para ejecutar las pruebas
 
