@@ -1,16 +1,16 @@
 {
     "username":      "bc.castro@uniandes.edu.co",
     "password":      "0123456789",
-    "posts_url":     "{process.env.main_url}:2370/ghost/#/posts",
-    "pages_url":     "{process.env.main_url}:2370/ghost/#/pages",
-    "dashboard_url": "{process.env.main_url}:2370/ghost/#/dashboard",
-    "new_page_url":  "{process.env.main_url}:2370/ghost/#/editor/page",
-    "new_post_url":  "{process.env.main_url}:2370/ghost/#/editor/post",
-    "sigin_url" :    "{process.env.main_url}:2370/ghost/#/signin",
+    "posts_url":     "{process.env.main_url}/ghost/#/posts",
+    "pages_url":     "{process.env.main_url}/ghost/#/pages",
+    "dashboard_url": "{process.env.main_url}/ghost/#/dashboard",
+    "new_page_url":  "{process.env.main_url}/ghost/#/editor/page",
+    "new_post_url":  "{process.env.main_url}/ghost/#/editor/post",
+    "sigin_url" :    "{process.env.main_url}/ghost/#/signin",
     "fill_title":    "Title",
     "fill_text":     "Text",
-    "settings_url":  "{process.env.main_url}:2370/ghost/#/settings",
-    "members_url":   "{process.env.main_url}:2370/ghost/#/members",
-    "new_tag_url":   "{process.env.main_url}:2370/ghost/#/tags/new",
-    "tags_url" :     "{process.env.main_url}:2370/ghost/#/tags"
+    "settings_url":  "{process.env.main_url}/ghost/#/settings",
+    "members_url":   "{process.env.main_url}/ghost/#/members",
+    "new_tag_url":   "{process.env.main_url}/ghost/#/tags/new",
+    "tags_url" :     "{process.env.main_url}/ghost/#/tags"
 }
