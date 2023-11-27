@@ -11,7 +11,7 @@ Given('Un usuario se encuentra en la pagina de inicio e inicia sesion en Ghost',
 
 When('el usuario se dirige a la seccion members del sitio', () => {
     memberItem.goToMembers();
-    cy.wait(1000);
+    cy.wait(1500);
     cy.url().should('eq', config.members_url);
 });
 
@@ -48,7 +48,7 @@ And('el usuario da clic en el boton Save', () => {
 
 And('el usuario vuelve a la seccion de miembros del sitio', () => {
     memberItem.goToMembers();
-    cy.wait(1000);
+    cy.wait(1500);
     cy.url().should('eq', config.members_url);
 });
 
@@ -63,7 +63,7 @@ And('el usario digita name y mail invalido', () => {
 
 Then('el usuario da click en el boton Leave', () => {
     memberItem.leave();
-    cy.wait(1000);
+    cy.wait(1500);
     cy.url().should('eq', config.members_url);
 });
 
@@ -86,7 +86,7 @@ Then('el usuario ve un error de mail invalido', () => {
 
 Then ('el usuario vuelve a la seccion de miembros del sitio', () => {
     memberItem.goToMembers();
-    cy.wait(500);
+    cy.wait(1500);
     cy.url().should('eq', config.members_url);
 });
 
