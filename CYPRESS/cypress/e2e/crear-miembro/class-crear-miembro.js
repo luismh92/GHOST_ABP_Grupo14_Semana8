@@ -39,6 +39,7 @@ class MemberItem {
         cy.wait(2000);
         cy.get('[data-test-nav="members"]').click();
         this.takeScreenshot();
+        cy.wait(1000);
     }
 
     newMember() {
