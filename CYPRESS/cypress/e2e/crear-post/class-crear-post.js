@@ -47,13 +47,14 @@ class PostItem {
     }
 
     submitPublish() {
-        cy.wait(800)
+        cy.wait(3000)
         cy.get('button[data-test-button="publish-flow"]').click();
         this.takeScreenshot();
+        cy.wait(1000)
     }
 
     submitPreview() {
-        cy.wait(800)
+        cy.wait(3000)
         cy.get('button[data-test-button="publish-flow-preview"]').click();
         this.takeScreenshot();
     }
