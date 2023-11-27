@@ -44,10 +44,15 @@ A continuación, usted encontrará una guía con los pasos necesarios para poder
 
 **Requisitos:**
 
-**Nota:** existe una version instalada en AWS ElasticBeanstalk:
+**Nota:** Esta suite de pruebas está diseñada para correr sobre una versión local de Ghost, pero existe también una version de la aplicación instalada en AWS ElasticBeanstalk. Si desea probarla, necesitará modificar el archivo ./assets/backup.json para agregar el servidor a las pruebas y ejecutarlas sobre la versión en la nube. Sin embargo, recomendamos ejecutar esta suite de pruebas de forma local para evitar cualquier tipo de fallas por carga incorrecta de recursos asociada a latencia o fluctuaciones de ancho de banda.
+
+Versión en la nube:
 
 http://54.172.114.8:2368/ghost/#/signin -- **5.74**
 
+_________
+**Para correr las pruebas en la versión local, es necesario que tenga instalada la version 5.74 de Ghost. De igual modo, debe modificar el archivo ./assets/backup.json con sus credenciales, o bien, al momento de realizar la configuración posterior a la instalación local de Ghost, verificar que el usuario y contraseña coincidan con los ya existentes en este archivo.**
+____________
 **Es necesario tener instalado Python.**
 
 Una vez cumpla con estos requisitos:
