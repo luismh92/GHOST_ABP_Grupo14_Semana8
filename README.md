@@ -26,14 +26,6 @@ _________________
 ## Tutorial Entrega Semana 8 Ghost - Pruebas Automatizadas de Software
 _________________
 
-### Video tutorial de ejecución de las pruebas
-
-A continuación, usted encontrará un enlace a un video con el paso a paso completo desde cero para la correcta ejecución de los tests, en Cypress, en caso tal de necesitar detalles adicionales sobre cómo ejecutar las pruebas:
-
-https://1drv.ms/f/s!AuwNpBW9kURksIssWXToTGZNBL32nQ?e=qaWUrA
-
-![image](https://github.com/luismh92/GHOST_ABP_Grupo14_Semana8/assets/142316799/418edd14-e1bf-4dfb-b7ea-3555b64d3208)
-
 
 ______________
 ## Paso a paso para ejecutar las pruebas
@@ -50,11 +42,8 @@ A continuación, usted encontrará una guía con los pasos necesarios para poder
 
 **Requisitos:**
 
-**Nota:** Esta suite de pruebas está diseñada para correr sobre una versión local de Ghost, pero existe también una version de la aplicación instalada en AWS ElasticBeanstalk. Si desea probarla, necesitará modificar el archivo ./assets/backup.json para agregar el servidor a las pruebas y ejecutarlas sobre la versión en la nube. Sin embargo, **recomendamos ejecutar esta suite de pruebas de forma local** para evitar cualquier tipo de fallas por carga incorrecta de recursos asociada a latencia o fluctuaciones de ancho de banda.
+**Nota:** Esta suite de pruebas está diseñada para correr sobre una versión local de Ghost.
 
-Versión en la nube:
-
-http://54.172.114.8:2368/ghost/#/signin -- **5.74**
 
 _________
 **Para correr las pruebas en la versión local, es necesario que tenga instalada la version 5.74 de Ghost. De igual modo, debe modificar el archivo ./assets/backup.json con sus credenciales, o bien, al momento de realizar la configuración posterior a la instalación local de Ghost, verificar que el usuario y contraseña coincidan con los ya existentes en este archivo.**
