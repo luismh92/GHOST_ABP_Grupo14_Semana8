@@ -1,8 +1,8 @@
-# GHOST_ABP_Grupo14_Semana7
+# GHOST_ABP_Grupo14_Semana8
 Repositorio para alojamiento de pruebas E2E
 
 ### Grupo 14
-Semana 7
+Semana 8
 
 ### Integrantes del equipo:
 
@@ -12,7 +12,7 @@ Luis Alberto Mendoza Hernández ([l.mendozah@uniandes.edu.co](mailto:l.mendozah@
 
 Hernán David Martínez Domínguez ([hd.martinezd1@uniandes.edu.co](mailto:hd.martinezd1@uniandes.edu.co))
 _________________
-## Tutorial Entrega Semana 7 Ghost - Pruebas Automatizadas de Software
+## Tutorial Entrega Semana 8 Ghost - Pruebas Automatizadas de Software
 _________________
 
 ### Video de ejecución de las pruebas
@@ -36,7 +36,7 @@ A continuación, usted encontrará una guía con los pasos necesarios para poder
 
 1. Clone el repositorio encontrado en https://github.com/CamiloCastro-MISO/GHOST_ABP_Grupo14_Semana7. Para esto, puede usar el comando: 
     ```bash
-    git clone https://github.com/CamiloCastro-MISO/GHOST_ABP_Grupo14_Semana7.git
+    git clone https://github.com/luismh92/GHOST_ABP_Grupo14_Semana8.git
     ```
    
 
@@ -90,7 +90,7 @@ npm install
 Ejecute el siguiente comando para correr los tests:
 
 ```powershell
-npm run pool-a-priori
+npm run iteracion-semana1-a-priori
 ```
 
 **Escenarios con datos dinamicos**
@@ -98,7 +98,7 @@ npm run pool-a-priori
 Ejecute el siguiente comando para correr los tests:
 
 ```powershell
-npm run pool-dinamico
+npm run iteracion-semana1-dinamico
 ```
 
 **Escenarios con datos aleatorios**
@@ -106,6 +106,14 @@ npm run pool-dinamico
 Ejecute el siguiente comando para correr los tests:
 
 ```powershell
-npm run pool-aleatorio-faker
+npm run iteracion-semana1-aleatorio-faker
+```
+
+**Escenarios con monkeys**
+
+Ejecute el siguiente comando para correr los tests:
+
+```powershell
+npm run iteracion-semana1-monkey
 ```
 
