@@ -12,7 +12,11 @@
     "escenario40-cypress-modified": "node backup-replace.js && npm run replace-json \"http://52.91.116.86\" && npx cypress run",
     "pool-a-priori": "node backup-replace.js && npm run replace-json \"http://localhost:2368\" && npx cypress run --env POOL_DATA=apriori",
     "pool-dinamico": "node backup-replace.js && npm run replace-json \"http://localhost:2368\" && npx cypress run --env POOL_DATA=dynamic",
-    "pool-aleatorio-faker": "node backup-replace.js && npm run replace-json \"http://localhost:2368\" && npx cypress run --env POOL_DATA=random"
+    "pool-aleatorio-faker": "node backup-replace.js && npm run replace-json \"http://localhost:2368\" && npx cypress run --env POOL_DATA=random",
+    "iteracion-semana1-a-priori": "node backup-replace.js && npm run replace-json \"http://localhost:2368\" && npx cypress run --spec ./cypress/e2e/iteracion-semana1.feature --env POOL_DATA=apriori",
+    "iteracion-semana1-dinamico": "node backup-replace.js && npm run replace-json \"http://localhost:2368\" && npx cypress run --spec ./cypress/e2e/iteracion-semana1.feature --env POOL_DATA=dynamic",
+    "iteracion-semana1-aleatorio-faker": "node backup-replace.js && npm run replace-json \"http://localhost:2368\" && npx cypress run --spec ./cypress/e2e/iteracion-semana1.feature --env POOL_DATA=random",
+    "iteracion-semana1-monkey": "node backup-replace.js && npm run replace-json \"http://localhost:2368\" && npx cypress run -C monkey-cypress.config.js"
   },
   "keywords": [],
   "author": "",
