@@ -26,6 +26,13 @@ _________________
 ## Tutorial Entrega Semana 8 Ghost - Pruebas Automatizadas de Software
 _________________
 
+### Video de ejecución de las pruebas
+
+A continuación, usted encontrará un enlace a un video con el paso a paso completo desde cero para la correcta ejecución de los tests, en Cypress, tambien deberia de tener en cuenta que los comandos de ejecuccion para esta semana son los mencionados al final de este documento, en caso tal de necesitar detalles adicionales sobre cómo ejecutar las pruebas:
+
+[https://drive.google.com/drive/folders/1YNBZ-IWp2veu2v5JNKMCSwle4HEYKehY?usp=sharing](https://drive.google.com/drive/folders/1YNBZ-IWp2veu2v5JNKMCSwle4HEYKehY?usp=sharing)
+
+![image](https://github.com/CamiloCastro-MISO/GHOST_ABP_Grupo14_Semana7/assets/142316799/f5da9953-0737-4fba-ac82-54050b123440)
 
 ______________
 ## Paso a paso para ejecutar las pruebas
