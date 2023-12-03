@@ -11,24 +11,30 @@ Bryan Camilo Castro ([bc.castro@uniandes.edu.co](mailto:bc.castro@uniandes.edu.c
 Luis Alberto Mendoza Hernández ([l.mendozah@uniandes.edu.co](mailto:l.mendozah@uniandes.edu.co))
 
 Hernán David Martínez Domínguez ([hd.martinezd1@uniandes.edu.co](mailto:hd.martinezd1@uniandes.edu.co))
+_________
+
+## Documentos semana 8
+
+A continuación encontrará la carpeta que contiene el video de la estrategia de la semana 8, así como la documentación correspondiente a la estrategia de pruebas de 8 semanas y al inventario de pruebas exploratorias manuales. Las incidencias asociadas a las pruebas las encontrará en la sección "Issues" de este repositorio.
+
+https://1drv.ms/f/s!AuwNpBW9kURksIsq5SyIICVtet-B8g?e=Yfb2Ri
+
+![image](https://github.com/luismh92/GHOST_ABP_Grupo14_Semana8/assets/142316799/61f17b98-16ab-4055-8d03-b0982f500c94)
+
+
 _________________
 ## Tutorial Entrega Semana 8 Ghost - Pruebas Automatizadas de Software
 _________________
 
-### Video de ejecución de las pruebas
+### Video tutorial de ejecución de las pruebas
 
 A continuación, usted encontrará un enlace a un video con el paso a paso completo desde cero para la correcta ejecución de los tests, en Cypress, en caso tal de necesitar detalles adicionales sobre cómo ejecutar las pruebas:
 
-[https://drive.google.com/drive/folders/1YNBZ-IWp2veu2v5JNKMCSwle4HEYKehY?usp=sharing](https://drive.google.com/drive/folders/1YNBZ-IWp2veu2v5JNKMCSwle4HEYKehY?usp=sharing)
+https://1drv.ms/f/s!AuwNpBW9kURksIssWXToTGZNBL32nQ?e=qaWUrA
 
-![image](https://github.com/CamiloCastro-MISO/GHOST_ABP_Grupo14_Semana7/assets/142316799/f5da9953-0737-4fba-ac82-54050b123440)
+![image](https://github.com/luismh92/GHOST_ABP_Grupo14_Semana8/assets/142316799/418edd14-e1bf-4dfb-b7ea-3555b64d3208)
 
-______________
-## Descripción de la estrategia:
 
-A continuación, encontrará un link a la descripción de la estrategia y análisis para este sprint de pruebas:
-
-https://github.com/CamiloCastro-MISO/GHOST_ABP_Grupo14_Semana7/wiki/Descripci%C3%B3n-de-la-estrategia-para-las-pruebas-en-Cypress-%E2%80%90-Semana-7
 ______________
 ## Paso a paso para ejecutar las pruebas
 
