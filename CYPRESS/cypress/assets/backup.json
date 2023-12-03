@@ -1,5 +1,5 @@
 {
-    "username":      "bc.castro@uniandes.edu.co",
+    "username":      "luis-m1992@hotmail.com",
     "password":      "0123456789",
     "posts_url":     "{process.env.main_url}/ghost/#/posts",
     "pages_url":     "{process.env.main_url}/ghost/#/pages",

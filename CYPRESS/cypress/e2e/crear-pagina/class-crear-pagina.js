@@ -98,6 +98,60 @@ class PageItem {
         this.takeScreenshot();
         cy.wait(1000)
     }
+
+    openPageSetting(){
+        cy.wait(1000);
+        cy.get('button[data-test-psm-trigger]').click({ force: true });
+        this.takeScreenshot();
+    }
+
+    expandMetadata(){
+        cy.wait(1000);
+        cy.get('button[data-test-button="meta-data"]').click();
+        this.takeScreenshot();
+    }
+
+    fillMetaTitle () {
+        cy.wait(1000);
+        cy.get('input[name="post-setting-meta-title"]').type(this.item.pageTitle);
+        this.takeScreenshot();
+    }
+
+    fillMetaDescripcion () {
+        cy.wait(1000);
+        const description = this.item.pageDescription.length > 500 ? this.item.pageDescription.substring(0, 500) : this.item.pageDescription;
+        cy.get('textarea[name="post-setting-meta-description"]').type(description);
+        this.takeScreenshot();
+    }
+
+
+    expandFacebook(){
+        cy.wait(1000);
+        cy.get('button[data-test-button="facebook-data"]').click();
+        this.takeScreenshot();
+    }
+
+    fillFacebookTitle () {
+        cy.wait(1000);
+        cy.get('input[name="post-setting-og-title"]').type(this.item.pageTitle);
+        this.takeScreenshot();
+    }
+
+    fillFacebookDescripcion () {
+        cy.wait(1000);
+        const description = this.item.pageDescription.length > 500 ? this.item.pageDescription.substring(0, 500) : this.item.pageDescription;
+        cy.get('textarea[name="post-setting-og-description"]').type(description);
+        this.takeScreenshot();
+    }
+
+    attachImage() {
+        cy.wait(1000);
+        const image = './cypress/assets/images/cypress-end-to-end-test.png';
+        cy.get('input[type="file"]').last().selectFile(image, {force: true});
+        this.takeScreenshot();
+    }
+
+
 }
 
 export default PageItem;
